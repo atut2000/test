@@ -1,5 +1,5 @@
 # Import flask with the request object
-http://ncssbot2019-group5-amaratut.herokuapp.com/lol?
+from flask import Flask, request, jsonify
 
 # Create the web server
 app = Flask(__name__)
@@ -11,7 +11,11 @@ def lol_bot():
     # request.values is a dictionary (cool!)
     text = request.values.get('text')
     # This bot lols at every command it gets sent!
-    return f'lol {text}'
+
+    return jsonify({
+            'response_type': 'in_channel',
+            'text': f'lol {text}',
+        })
 
 # Start the web server!
 if __name__ == '__main__':
