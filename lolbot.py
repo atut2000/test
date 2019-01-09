@@ -1,5 +1,5 @@
 # Import flask with the request object
-from flask import Flask, request
+http://ncssbot2019-group5-amaratut.herokuapp.com/lol?
 
 # Create the web server
 app = Flask(__name__)
